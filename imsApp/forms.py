@@ -3,7 +3,10 @@ from django import forms
 from .models import Product
 
 class ProductForm(forms.ModelForm):
-    class Meta: {
+    class Meta: 
+        model = Product
+        fields = '__all__'
+        {
         'product_id': 'product ID',
         'name': 'Name',
         'sku': 'SKU',
